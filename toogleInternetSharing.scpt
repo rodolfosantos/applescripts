@@ -1,3 +1,6 @@
+# If its on, it will turn off
+# If its off, it will turn on
+
 # Open System Preferences application
 tell application "System Preferences"
 	activate
@@ -16,9 +19,6 @@ tell application "System Events"
 			set _checkbox to checkbox 1 of row 7 of table 1 of scroll area 1 of group 1
 			
 			tell _checkbox
-				# If the checkbox is checked then uncheck.
-				if (its value as boolean) then click _checkbox
-				delay 1
 				
 				# Recheck the checkbox.
 				click _checkbox
